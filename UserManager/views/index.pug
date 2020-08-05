@@ -1,0 +1,11 @@
+html
+    head
+        title MongoDB User Manager
+        h1 MongoDB User Manager
+    body
+        form(action="/addUser", method="POST")
+            input(name='name' placeholder="Name...")
+            input(name='role', placeholder='Role...')
+            label(for='age') Age:
+            input(type='text', name="age")
+            button(type='submit') Add User
