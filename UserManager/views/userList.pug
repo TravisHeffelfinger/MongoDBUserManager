@@ -1,0 +1,29 @@
+html
+    head
+        title Users List
+        h1 Currently Stored Users
+    body
+        ul
+            each user in users
+                li
+                    div
+                        h5 First Name:
+                        span= user.first_name
+                    div
+                        h5 Last Name:
+                        span= user.last_name
+                    div
+                        h5 Email Address:
+                        span= user.email_address
+                    div
+                        h5 Age:
+                        span= user.age
+                    div
+                        h5 User ID:
+                        span= user.user_id
+                    div
+                        h5 Role:
+                        span= user.role
+                    div
+                        h5 password:
+                        span= user.password

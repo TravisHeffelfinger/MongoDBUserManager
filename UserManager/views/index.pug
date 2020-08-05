@@ -1,11 +1,25 @@
 html
     head
-        title MongoDB User Manager
-        h1 MongoDB User Manager
+        title AWS User Manager
+        h1 User Manager hosted on AWS
     body
-        form(action="/addUser", method="POST")
-            input(name='name' placeholder="Name...")
-            input(name='role', placeholder='Role...')
-            label(for='age') Age:
-            input(type='text', name="age")
-            button(type='submit') Add User
+        form(action="/createUser", method="POST")
+            div
+                label(for='firstname') First Name: 
+                input(name='firstname')
+            div
+                label(for='lastname') Last Name:
+                input(name='lastname')
+            div
+                label(for='email') Email:
+                input(name='email', type='email')
+            div
+                label(for='age') Age:
+                input(name='age', type='number')
+            div
+                label(for='password') Password:
+                input(name='password', type='password')
+            div
+                button(type='submit') Add User
+        h4 
+            a(href='/users-list') View Users
