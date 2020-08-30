@@ -1,0 +1,27 @@
+html
+    head
+        title User Manager
+        h1 Edit User
+    body
+        form(action="/update-user", method="POST")
+            div
+                label(for='firstname') First Name: 
+                label(for='firstname')=editUser.first_name
+                input(name='firstname', value=editUser.first_name)
+            div
+                label(for='lastname') Last Name:
+                input(name='lastname', value=editUser.last_name)
+            div
+                label(for='email') Email:
+                input(name='email', type='email', value=editUser.email_address)
+            div
+                label(for='age') Age:
+                input(name='age', type='number', value=editUser.age)
+            div
+                label(for='password') Password:
+                input(name='password', type='password', value=editUser.password)
+            div
+                label(name='userid', value=editUser.user_id)
+                button(type='submit') Update User
+        h4 
+            a(href='/users-list') View Users
